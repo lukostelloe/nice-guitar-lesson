@@ -1,3 +1,5 @@
+import { ContactForm } from "@/components/ContactForm";
+
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-zinc-50 font-sans text-zinc-800">
@@ -11,28 +13,22 @@ export default function Home() {
           beginners and intermediates. Acoustic • Electric • Classical.
         </p>
 
-        <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:items-start">
-          <a
-            href="#book"
-            className="rounded-xl bg-zinc-900 px-6 py-3 text-white transition hover:bg-zinc-700"
-          >
-            Book a Lesson
-          </a>
-          <a
-            href="#about"
-            className="rounded-xl border border-zinc-300 px-6 py-3 text-zinc-700 transition hover:bg-zinc-100"
-          >
-            Learn More
-          </a>
-        </div>
-
-        <div className="mt-16">
-          <img
-            src="/guitar-lesson.jpg"
-            alt="Guitar lesson in Nice"
-            className="w-full rounded-2xl shadow-sm"
-          />
-        </div>
+        {/* About Me Section */}
+        <section id="about" className="mt-24">
+          <h2 className="text-2xl font-semibold text-zinc-900">About Me</h2>
+          <p className="mt-4 text-zinc-600 leading-relaxed">
+            Hi, I’m <strong>Luke</strong> — a guitarist and teacher based in
+            Nice. I’ve been playing for over 15 years and specialize in relaxed,
+            personal lessons focused on helping you enjoy the instrument at your
+            own pace. Whether you’re starting out or looking to refine your
+            technique, I’ll help you develop confidence, musicality, and a
+            lifelong love of playing.
+          </p>
+        </section>
+        <section id="about" className="mt-24">
+          <h2 className="text-2xl font-semibold text-zinc-900">Contact</h2>
+          <ContactForm />
+        </section>
       </main>
 
       <footer className="mt-auto mb-6 text-sm text-zinc-500">
