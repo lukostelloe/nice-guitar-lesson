@@ -33,9 +33,9 @@ export async function POST(req: Request) {
 
     await resend.emails.send({
       from: "Contact Form <contact@niceguitarlesson.com>", // must be on your verified domain
-      to: [TO_EMAIL],
+      to: [TO_EMAIL!],
       subject: `New message from ${name}`,
-      reply_to: email,
+      replyTo: email,
       text: `From: ${name} <${email}>\n\n${message}`,
       html: `<p><strong>From:</strong> ${name} &lt;${email}&gt;</p><p>${message.replace(
         /\n/g,
@@ -44,11 +44,9 @@ export async function POST(req: Request) {
     });
 
     return NextResponse.json({ ok: true });
-  } catch (err: any) {
+  } catch (err: unknown) {
     console.error("Contact form error:", err);
-    return NextResponse.json(
-      { ok: false, error: err?.message ?? "Failed to send" },
-      { status: 500 }
-    );
+    const message = err instanceof Error ? err.message : "Failed to send";
+    return NextResponse.json({ ok: false, error: message }, { status: 500 });
   }
 }
