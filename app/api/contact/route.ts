@@ -29,7 +29,7 @@ export async function POST(req: Request) {
     }
 
     await resend.emails.send({
-      from: "Contact Form <contact@niceguitarlesson.com>",
+      from: "Nice Guitar Lesson <contact@niceguitarlesson.com>",
       to: [TO_EMAIL],
       subject: `New message from ${name}`,
       replyTo: email, // camelCase
