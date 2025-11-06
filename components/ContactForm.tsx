@@ -60,7 +60,7 @@ export function ContactForm() {
         autoComplete="off"
       />
 
-      <div className="grid gap-2">
+      <div className="grid gap-2 text-left">
         <label htmlFor="name" className="text-sm font-medium text-zinc-800">
           Name
         </label>
@@ -73,7 +73,7 @@ export function ContactForm() {
         />
       </div>
 
-      <div className="grid gap-2">
+      <div className="grid gap-2 text-left">
         <label htmlFor="email" className="text-sm font-medium text-zinc-800">
           Email
         </label>
@@ -87,7 +87,19 @@ export function ContactForm() {
         />
       </div>
 
-      <div className="grid gap-2">
+      <div className="grid gap-2 text-left">
+        <label htmlFor="email" className="text-sm font-medium text-zinc-800">
+          Phone Number
+        </label>
+        <input
+          id="phone"
+          name="phone"
+          type="phone"
+          className="rounded-xl border border-zinc-300 px-4 py-3 outline-none focus:ring-2 focus:ring-zinc-300"
+        />
+      </div>
+
+      <div className="grid gap-2 text-left">
         <label htmlFor="message" className="text-sm font-medium text-zinc-800">
           Message
         </label>
@@ -97,7 +109,7 @@ export function ContactForm() {
           required
           rows={5}
           className="rounded-xl border border-zinc-300 px-4 py-3 outline-none focus:ring-2 focus:ring-zinc-300"
-          placeholder="Tell me a bit about your goals, experience, and availability…"
+          placeholder="Information or questions about lessons..."
         />
       </div>
 
