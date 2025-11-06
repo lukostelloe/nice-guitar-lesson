@@ -1,16 +1,13 @@
 import { ContactForm } from "@/components/ContactForm";
-import Link from "next/link";
 import { useTranslations } from "next-intl";
 import Head from "next/head";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import Faq from "@/components/Faq";
+import AboutMe from "@/components/AboutMe";
+import Resources from "@/components/Resources";
+import Contact from "@/components/Contact";
 
 export default function Home() {
-  const t = useTranslations("HomePage");
+  const t = useTranslations("homepage");
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-zinc-50 font-sans text-zinc-800">
       <Head>
@@ -196,136 +193,33 @@ export default function Home() {
 
       <main className="w-full max-w-3xl px-8 py-24 text-center">
         <h2 className="text-2xl font-semibold text-zinc-900">{t("title")}</h2>
-        <p className="text-lg text-zinc-600">
-          Learn guitar in the heart of Nice — relaxed, personal lessons for
-          beginners and intermediates
-        </p>
+        <p className="text-lg text-zinc-600">{t("intro")}</p>
 
-        {/* About Me Section */}
         <section id="about" className="mt-24">
-          <h2 className="text-2xl font-semibold text-zinc-900">About Me</h2>
-          <h2 className="text-l font-semibold text-zinc-900">
-            Guitarist, teacher, songwriter, music producer
-          </h2>
-          <p className="mt-4 text-zinc-600 leading-relaxed">
-            Hi, I&apos;m Luke
-          </p>
-          <p className="mt-4 text-zinc-600 leading-relaxed">
-            I have been playing music for as long as I can remember. As a kid
-            there were always instruments around the house, and I was one of
-            those kids who was made go to piano lessons. As a teenager I loved
-            rock and punk music, and played drums with a lot of bands, but the
-            guitar was the instrument that allowed me to express myself fully in
-            a musical sense. I&apos;m mostly self taught, and have devoted
-            hours, days, years to learning and developing my own style and way
-            of expression on the guitar. I love teaching, because I can pass on
-            this passion, the things I know, but also help students to find
-            their unique way of playing that allows them to fully be themselves
-            and play how they want to play. I love all types of music, but
-            songwriting and production is my passion with music. I have written
-            and released hundreds of original songs and instrumentals, and have
-            even sold music to high level artists.
-          </p>
+          <AboutMe />
         </section>
         <section id="contact" className="mt-24">
-          <h2 className="text-2xl font-semibold text-zinc-900">Resources</h2>
-          <div className="mt-6 flex flex-col sm:flex-row gap-3">
-            <a
-              href="https://www.youtube.com/@elkosbeats"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-md border border-zinc-900 px-6 py-3 text-sm font-medium text-zinc-900 hover:bg-zinc-100 transition-colors"
-            >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-              </svg>
-              Check out my beats on YouTube
-            </a>
-            <a
-              href="https://open.spotify.com/artist/0k519s8KWmO2LM9Jw63dzf?si=TBx2mXdDQKeDSaxqu03ojw"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-md border border-zinc-900 px-6 py-3 text-sm font-medium text-zinc-900 hover:bg-zinc-100 transition-colors"
-            >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.42 1.56-.299.421-1.02.599-1.559.3z" />
-              </svg>
-              Check out my songs on Spotify
-            </a>
-            <Link
-              href="#contact"
-              className="inline-block rounded-md border border-zinc-900 px-6 py-3 text-sm font-medium text-zinc-900 hover:bg-zinc-100 transition-colors text-center"
-            >
-              Contact me for a free lesson
-            </Link>
-          </div>
+          <Resources />
         </section>
         <section id="contact" className="mt-24">
-          <h2 className="text-2xl font-semibold text-zinc-900">Contact</h2>
-          <p>Luke</p>
-          <p>
-            <a href="tel:+33644869902" className="underline underline-offset-4">
-              +33 (0)6 44 86 99 02
-            </a>
-          </p>
-          <ContactForm />
+          <Contact />
         </section>
-        <section>
-          <h1>FAQ</h1>
-          <Accordion
-            type="single"
-            collapsible
-            className="w-full"
-            defaultValue="item-1"
-          >
-            <AccordionItem value="item-1">
-              <AccordionTrigger>
-                Do you offer a free trial lesson?
-              </AccordionTrigger>
-              <AccordionContent className="flex flex-col gap-4 text-balance">
-                <p>
-                  Yes, I offer a free online trial lesson of 15 minutes to meet
-                  with you and understand your objectives.
-                </p>
-                <p>
-                  From there we can decide if we want to move ahead with
-                  lessons.
-                </p>
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger>Where are lessons held?</AccordionTrigger>
-              <AccordionContent className="flex flex-col gap-4 text-balance">
-                <p>I offer in person lessons at your home or at mine.</p>
-                <p>I also offer online video lessons.</p>
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3">
-              <AccordionTrigger>What styles do you teach?</AccordionTrigger>
-              <AccordionContent className="flex flex-col gap-4 text-balance">
-                <p>
-                  I teach a variety of styles: rock, blues pop, country, folk
-                  and fingerstyle guiatr.
-                </p>
-                <p>
-                  I also teach in a way that encourages students to find their
-                  own voice on the guitar, free from predefined genres.
-                </p>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+        <section id="faq" className="mt-24">
+          <Faq />
         </section>
       </main>
 
-      <footer className="mt-auto mb-6 text-sm text-zinc-500">
-        {" "}
+      <footer className="flex flex-col items-center justify-center mb-6 text-sm text-zinc-500 text-center">
         <p>
-          <strong>Nice Guitar Lesson</strong> — Guitar lessons in Nice
+          <strong>Nice Guitar Lesson</strong>
         </p>
         <p>
-          06200 Nice · <a href="tel:+33644869902">+33 (0)6 44 87 99 02</a>
+          06200 Nice ·{" "}
+          <a href="tel:+33644869902" className="underline underline-offset-2">
+            +33 (0)6 44 87 99 02
+          </a>
         </p>
-        © {new Date().getFullYear()} Nice Guitar Lesson · Made with ❤️ in Nice
+        <p>© {new Date().getFullYear()} · Made with ❤️ in Nice</p>
       </footer>
     </div>
   );

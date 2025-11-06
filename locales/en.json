@@ -1,0 +1,22 @@
+{
+  "homepage": {
+    "title": "Guitar lessons in Nice",
+    "intro": "Learn guitar in the heart of Nice — relaxed, personal lessons for all levels"
+  },
+  "about_me": {
+    "title": "About Me",
+    "subtitle": "Guitarist, teacher, songwriter, music producer",
+    "hi_im_luke": "Hi, I'm Luke",
+    "info": "I have been playing music for as long as I can remember. As a kid there were always instruments around the house, and I was one of those kids who was made go to piano lessons. As a teenager I loved rock and punk music, and played drums with a lot of bands, but the guitar was the instrument that allowed me to express myself fully in a musical sense. I'm mostly self taught, and have devoted hours, days, years to learning and developing my own style and way of expression on the guitar. I love teaching, because I can pass on this passion, the things I know, but also help students to find their unique way of playing that allows them to fully be themselves and play how they want to play. I love all types of music, but songwriting and production is my passion with music. I have written and released hundreds of original songs and instrumentals, and have even sold music to high level artists."
+  },
+  "faq": {
+    "q1": "Do you offer a free trial lesson?",
+    "a1": "Yes, I offer a free online lesson of 15 minutes to meet with you and understand your objectives. From there we can decide if we want to move ahead with lessons.",
+    "q2": "Where are lessons held?",
+    "a2": "I offer in person lessons at your home or at mine. I also offer online video lessons.",
+    "q3": "What styles do you teach?",
+    "a3": "I teach a variety of styles: rock, blues pop, country, folk and fingerstyle guiatr. I love to teach in a way that encourages students to find their own voice on the guitar, free from predefined genres.",
+    "q4": "How long are lessons?",
+    "a4": "A normal lesson is 45 minutes, but we can extend or shorten those depending on your neeeds."
+  }
+}

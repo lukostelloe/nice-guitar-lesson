@@ -1,0 +1,22 @@
+{
+  "homepage": {
+    "title": "Cours de guitare à Nice",
+    "intro": "Apprenez la guitare au cœur de Nice — des cours détendus et personnalisés pour tous les niveaux"
+  },
+  "about_me": {
+    "title": "À propos de moi",
+    "subtitle": "Guitariste, professeur, auteur-compositeur, producteur de musique",
+    "hi_im_luke": "Salut, je suis Luke",
+    "info": "Je joue de la musique depuis aussi longtemps que je m'en souvienne. Enfant, il y avait toujours des instruments à la maison, et j'étais de ceux qu'on envoyait aux cours de piano. Adolescent, je me suis passionné pour le rock et le punk, et j'ai joué de la batterie dans plusieurs groupes, mais c'est la guitare qui m'a vraiment permis de m'exprimer pleinement sur le plan musical. Je suis principalement autodidacte, et j'ai consacré des heures, des jours, des années à développer mon propre style et ma manière personnelle de jouer. J'aime enseigner, car cela me permet de transmettre cette passion, de partager mes connaissances, mais aussi d'aider les élèves à trouver leur propre façon de jouer, celle qui leur permet d'être eux-mêmes et de s'exprimer librement. J'apprécie tous les styles de musique, mais l'écriture et la production de chansons sont ce qui me passionne le plus. J'ai écrit et publié des centaines de morceaux et d'instrumentaux originaux, et j'ai même vendu de la musique à des artistes de haut niveau."
+  },
+  "faq": {
+    "q1": "Proposez-vous un cours d'essai gratuit ?",
+    "a1": "Oui, je propose un cours en ligne gratuit de 15 minutes pour faire connaissance et comprendre vos objectifs. À partir de là, nous pourrons décider ensemble si nous souhaitons continuer les cours.",
+    "q2": "Où se déroulent les cours ?",
+    "a2": "Je propose des cours en personne à votre domicile ou au mien. Je donne également des cours en ligne par visioconférence.",
+    "q3": "Quels styles enseignez-vous ?",
+    "a3": "J'enseigne une grande variété de styles : rock, blues, pop, country, folk et fingerstyle. J'aime enseigner de manière à encourager chaque élève à trouver sa propre voix à la guitare, sans être limité par des genres prédéfinis.",
+    "q4": "Combien de temps dure un cours ?",
+    "a4": "Un cours standard dure 45 minutes, mais nous pouvons l'adapter en fonction de vos besoins."
+  }
+}

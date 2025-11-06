@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Header } from "@/components/Header";
 import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
-import { cookies } from 'next/headers';
+import { cookies } from "next/headers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,8 +26,8 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const cookieStore = await cookies();
-  const locale = cookieStore.get('locale')?.value || 'en';
-  const messages = (await import(`../messages/${locale}.json`)).default;
+  const locale = cookieStore.get("locale")?.value || "en";
+  const messages = (await import(`../locales/${locale}.json`)).default;
 
   return (
     <html lang={locale}>
