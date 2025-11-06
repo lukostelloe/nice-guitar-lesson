@@ -2,6 +2,12 @@ import { ContactForm } from "@/components/ContactForm";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import Head from "next/head";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export default function Home() {
   const t = useTranslations("HomePage");
@@ -17,7 +23,7 @@ export default function Home() {
         </title>
         <meta
           name="description"
-          content="Relaxed, personal guitar lessons in Nice for beginners and intermediates. Acoustic, electric & classical. First lesson free."
+          content="Relaxed, personal guitar lessons in Nice for all levels. Acoustic, electric & classical."
         />
         <link rel="canonical" href="https://niceguitarlesson.com/" />
 
@@ -45,21 +51,6 @@ export default function Home() {
         />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Guitar Lessons in Nice | Acoustic, Electric & Classical"
-        />
-        <meta
-          name="twitter:description"
-          content="Relaxed, personal guitar lessons in Nice. First lesson free."
-        />
-        <meta
-          name="twitter:image"
-          content="https://niceguitarlesson.com/og/og-nice-guitar-lesson.jpg"
-        />
 
         {/* Hreflang (only if you have a FR page) */}
         <link
@@ -278,6 +269,51 @@ export default function Home() {
             </a>
           </p>
           <ContactForm />
+        </section>
+        <section>
+          <h1>FAQ</h1>
+          <Accordion
+            type="single"
+            collapsible
+            className="w-full"
+            defaultValue="item-1"
+          >
+            <AccordionItem value="item-1">
+              <AccordionTrigger>
+                Do you offer a free trial lesson?
+              </AccordionTrigger>
+              <AccordionContent className="flex flex-col gap-4 text-balance">
+                <p>
+                  Yes, I offer a free online trial lesson of 15 minutes to meet
+                  with you and understand your objectives.
+                </p>
+                <p>
+                  From there we can decide if we want to move ahead with
+                  lessons.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger>Where are lessons held?</AccordionTrigger>
+              <AccordionContent className="flex flex-col gap-4 text-balance">
+                <p>I offer in person lessons at your home or at mine.</p>
+                <p>I also offer online video lessons.</p>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger>What styles do you teach?</AccordionTrigger>
+              <AccordionContent className="flex flex-col gap-4 text-balance">
+                <p>
+                  I teach a variety of styles: rock, blues pop, country, folk
+                  and fingerstyle guiatr.
+                </p>
+                <p>
+                  I also teach in a way that encourages students to find their
+                  own voice on the guitar, free from predefined genres.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </section>
       </main>
 
