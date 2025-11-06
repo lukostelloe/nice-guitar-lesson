@@ -202,13 +202,6 @@ export default function Home() {
           }),
         }}
       />
-      <iframe
-        title="Map – Guitar Lessons in Nice"
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps/embed?pb=!1m18!...your-place-id..."
-        className="mt-6 h-64 w-full rounded-lg border"
-      />
 
       <main className="w-full max-w-3xl px-8 py-24 text-center">
         <h2 className="text-2xl font-semibold text-zinc-900">{t("title")}</h2>
