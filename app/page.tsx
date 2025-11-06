@@ -9,7 +9,12 @@ export default function Home() {
     <div className="flex min-h-screen flex-col items-center justify-center bg-zinc-50 font-sans text-zinc-800">
       <Head>
         {/* Basic */}
-        <title>Guitar Lessons in Nice</title>
+        <title>
+          <h1 className="text-3xl font-bold text-zinc-900">
+            Guitar Lessons in Nice
+          </h1>
+          Guitar Lessons in Nice
+        </title>
         <meta
           name="description"
           content="Relaxed, personal guitar lessons in Nice for beginners and intermediates. Acoustic, electric & classical. First lesson free."
@@ -81,17 +86,17 @@ export default function Home() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "EducationalOrganization",
+            "@type": "LocalBusiness",
+            "@id": "https://niceguitarlesson.com/#business",
             name: "Nice Guitar Lesson",
-            description:
-              "Guitar lessons in Nice for beginners and intermediates: acoustic, electric & classical. First lesson free.",
             url: "https://niceguitarlesson.com/",
-            telephone: "+33 6 12 34 56 78", // <- update
-            email: "hello@niceguitarlesson.com", // <- update
+            image: "https://niceguitarlesson.com/og/og-nice-guitar-lesson.jpg",
+            telephone: "+33 6 44 86 99 02",
+            email: "hello@niceguitarlesson.com",
             priceRange: "€€",
             address: {
               "@type": "PostalAddress",
-              streetAddress: "12 Rue de la Guitare", // <- update
+              streetAddress: "12 Rue de la Guitare",
               addressLocality: "Nice",
               postalCode: "06000",
               addressCountry: "FR",
@@ -101,10 +106,21 @@ export default function Home() {
               latitude: 43.7009,
               longitude: 7.2683,
             },
+            areaServed: { "@type": "City", name: "Nice" },
             sameAs: [
               "https://www.youtube.com/@elkosbeats",
               "https://open.spotify.com/artist/0k519s8KWmO2LM9Jw63dzf",
             ],
+            makesOffer: [
+              {
+                "@type": "Offer",
+                price: "30",
+                priceCurrency: "EUR",
+                description: "30-minute trial lesson",
+                availability: "https://schema.org/InStock",
+              },
+            ],
+            serviceType: "Guitar lessons",
             openingHoursSpecification: [
               {
                 "@type": "OpeningHoursSpecification",
@@ -125,7 +141,29 @@ export default function Home() {
                 closes: "14:00",
               },
             ],
-            areaServed: "Nice",
+            potentialAction: {
+              "@type": "ReserveAction",
+              target: "https://niceguitarlesson.com/#contact",
+              name: "Book a free trial lesson",
+            },
+          }),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://niceguitarlesson.com/",
+              },
+            ],
           }),
         }}
       />
@@ -164,6 +202,13 @@ export default function Home() {
           }),
         }}
       />
+      <iframe
+        title="Map – Guitar Lessons in Nice"
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed?pb=!1m18!...your-place-id..."
+        className="mt-6 h-64 w-full rounded-lg border"
+      />
 
       <main className="w-full max-w-3xl px-8 py-24 text-center">
         <h2 className="text-2xl font-semibold text-zinc-900">{t("title")}</h2>
@@ -187,9 +232,9 @@ export default function Home() {
             those kids who was made go to piano lessons. As a teenager I loved
             rock and punk music, and played drums with a lot of bands, but the
             guitar was the instrument that allowed me to express myself fully in
-            a musical sense. I'm mostly self taught, and have devoted hours,
-            days, years to learning and developing my own style and way of
-            expression on the guitar. I love teaching, because I can pass on
+            a musical sense. I&apos;m mostly self taught, and have devoted
+            hours, days, years to learning and developing my own style and way
+            of expression on the guitar. I love teaching, because I can pass on
             this passion, the things I know, but also help students to find
             their unique way of playing that allows them to fully be themselves
             and play how they want to play. I love all types of music, but
@@ -244,6 +289,13 @@ export default function Home() {
       </main>
 
       <footer className="mt-auto mb-6 text-sm text-zinc-500">
+        {" "}
+        <p>
+          <strong>Nice Guitar Lesson</strong> — Guitar lessons in Nice
+        </p>
+        <p>
+          06200 Nice · <a href="tel:+33644869902">+33 (0)6 44 87 99 02</a>
+        </p>
         © {new Date().getFullYear()} Nice Guitar Lesson · Made with ❤️ in Nice
       </footer>
     </div>
